@@ -1,0 +1,88 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #f0f4ff, #d9e4ff);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+    padding-top: 50px;
+  }
+  
+  /* Quiz Box */
+  .quiz-container {
+    background-color: #ffffff;
+    padding: 35px 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Headings */
+  .quiz-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .quiz-container h3 {
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 30px;
+  }
+  
+  /* Question */
+  .quiz-container p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+  }
+  
+  /* Input field */
+  .quiz-container input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .quiz-container input[type="text"]:focus {
+    border-color: #0056b3;
+  }
+  
+  /* Buttons */
+  .quiz-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: 0.3s ease;
+  }
+  
+  .quiz-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Feedback */
+  .feedback {
+    font-size: 1.1rem;
+    margin-top: 10px;
+    font-weight: 600;
+  }
+  
+  .correct {
+    color: #28a745;
+  }
+  
+  .wrong {
+    color: #dc3545;
+  }
+  

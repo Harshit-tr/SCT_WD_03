@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './style.css'
 function Questions() {
     const questions = [
         {
@@ -109,24 +109,28 @@ function Questions() {
     setScore(0);
   }
   return (
-    <div>
-      <h2>React Quiz</h2>
-      <h3>Score:{score}</h3>
-      <p>
-        <strong>Question:</strong>
-        {currentQuestion.question}
+    <div className="quiz-container">
+    <h2>React Quiz</h2>
+    <h3>Score: {score}</h3>
+    <p><strong>Question:</strong> {currentQuestion.question}</p>
+  
+    <form onSubmit={handleSubmit}>
+      <label>Answer:</label><br />
+      <input type="text" value={showAnswer} onChange={handleAnswerSubmit} />
+      <br />
+      <button type="submit">Submit</button>
+    </form>
+  
+    {iscorrect !== null && (
+      <p className={`feedback ${iscorrect ? "correct" : "wrong"}`}>
+        {iscorrect ? "Correct Answer 🎉" : "Wrong Answer ❌"}
       </p>
-      <form onSubmit={handleSubmit}>
-        <label>Answer:</label>
-        <input type="text" value={showAnswer} onChange={handleAnswerSubmit} />
-        <button type="submit">Submit</button>
-      </form>
-      {iscorrect !== null && (
-        <p>{iscorrect ? "Correct Ansewer" : "Wrong Answer"}</p>
-      )}
-      <button onClick={handleRestart}>Restart Quiz</button>
-    </div>
+    )}
+  
+    <button onClick={handleRestart}>Restart Quiz</button>
+  </div>  
   );
 }
 
 export default Questions;
+
